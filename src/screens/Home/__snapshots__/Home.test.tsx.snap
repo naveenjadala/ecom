@@ -4,7 +4,7 @@ exports[`Home should render Home screen 1`] = `
 <RCTSafeAreaView
   style={
     {
-      "backgroundColor": "#fff",
+      "backgroundColor": "#FFFFFF",
       "flex": 1,
       "minHeight": "100%",
       "minWidth": "100%",

@@ -12,10 +12,10 @@ type Props = {};
  * @return {ReactElement} The rendered Details component.
  */
 const Details = (props: Props) => {
-  const {navigate} = useNavigation<HomeStackNavigationProp>();
+  const {navigation} = useNavigation<HomeStackNavigationProp>();
   return (
     <View>
-      <Button title="press " onPress={() => navigate('Home')} />
+      <Button title="press " onPress={() => navigation.navigate('Home')} />
     </View>
   );
 };
