@@ -14,6 +14,7 @@ import PhotoPickerModal from '../../components/imageUploadComponent/PhotoPickerM
 import {Camera, Gallery} from '../../utils/camera';
 import {ProfileStackNavigationProp} from '../../navigation/Route';
 import ProfileImage from '../../components/ProfileImage/ProfileImage';
+import {Divider} from 'react-native-paper';
 
 type Props = {};
 /**
@@ -59,7 +60,7 @@ const Profile = (props: Props) => {
   return (
     <ScrollView style={profileStyles.scroll}>
       <>
-        <View style={{height: 60}} />
+        <View style={profileStyles.header} />
         <View style={profileStyles.container}>
           <View style={profileStyles.profileImage}>
             <ProfileImage onClick={openImageModal} image={image} />
@@ -74,16 +75,19 @@ const Profile = (props: Props) => {
               onClick={() => console.log('click')}
               elementImage={<OrderIcon width={30} height={30} />}
             />
+            <Divider style={profileStyles.divider} />
             <ProfileElements
               title={'Pass'}
               onClick={() => console.log('click')}
               elementImage={<PassIcon width={30} height={30} />}
             />
+            <Divider style={profileStyles.divider} />
             <ProfileElements
               title={'Events'}
               onClick={() => console.log('click')}
               elementImage={<EventIcon width={30} height={30} />}
             />
+            <Divider style={profileStyles.divider} />
             <ProfileElements
               title={'Settings'}
               onClick={() => console.log('click')}
@@ -97,6 +101,7 @@ const Profile = (props: Props) => {
             subTitle="View message"
             onClick={() => console.log('click')}
           />
+          <Divider />
           <ProfileEvents
             title="YOUR NIKE MEMBER REWARDS"
             subTitle="View rewards"
