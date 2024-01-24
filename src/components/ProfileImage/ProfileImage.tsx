@@ -1,7 +1,7 @@
 import {StyleSheet, Text, TouchableOpacity, View, Image} from 'react-native';
 import React from 'react';
 import {profileImgStyles} from './style';
-import Avatar from '../../../../assets/images/avatar.svg';
+import Avatar from '../../assets/images/avatar.svg';
 
 type Props = {
   onClick: () => void | undefined;

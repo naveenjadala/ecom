@@ -2,7 +2,7 @@ import {StyleSheet} from 'react-native';
 import {getFontSize} from '../../assets/fonts/FontSizes';
 import {colors} from '../../assets/colors';
 
-export const profileStyles = StyleSheet.create({
+export const editProfileStyles = StyleSheet.create({
   scroll: {
     flex: 1,
     backgroundColor: colors.primary,

@@ -11,15 +11,27 @@ exports[`Profile should render Profile screen snapShort 1`] = `
     }
   }
 >
-  <RCTScrollView>
+  <RCTScrollView
+    style={
+      {
+        "backgroundColor": "#FFFFFF",
+        "flex": 1,
+      }
+    }
+  >
     <View>
       <View
         style={
           {
-            "backgroundColor": "#FFFFFF",
-            "flex": 1,
+            "height": 60,
+          }
+        }
+      />
+      <View
+        style={
+          {
             "marginBottom": "3%",
-            "paddingTop": "10%",
+            "paddingTop": "5%",
           }
         }
       >

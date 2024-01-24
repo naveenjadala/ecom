@@ -27,6 +27,7 @@ import {colors} from '../assets/colors';
 import ShopHome from '../screens/Shop/ShopHome/ShopHome';
 import BagHome from '../screens/Bag/BagHome/BagHome';
 import FavoritesHome from '../screens/Favorites/FavoritesHome/FavoritesHome';
+import EditProfile from '../screens/EditProfile/EditProfile';
 
 // Create a bottom tab navigator for the main app navigation.
 const Tab = createBottomTabNavigator<TabParamList>();
@@ -70,6 +71,15 @@ const ProfileStack = () => {
   return (
     <ProfileStackNav.Navigator screenOptions={{headerShown: false}}>
       <ProfileStackNav.Screen name="Profile" component={Profile} />
+      <ProfileStackNav.Screen
+        name="EditProfile"
+        component={EditProfile}
+        options={{
+          animation: 'slide_from_bottom',
+          presentation: 'modal',
+          animationDuration: 200,
+        }}
+      />
     </ProfileStackNav.Navigator>
   );
 };

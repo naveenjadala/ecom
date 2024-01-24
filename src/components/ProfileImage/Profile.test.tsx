@@ -1,4 +1,4 @@
-import {render, screen} from '../../../../test/test-utils';
+import {render, screen} from '../../test/test-utils';
 import ProfileImage from './ProfileImage';
 
 test('should Profile snapshot', () => {

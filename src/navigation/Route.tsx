@@ -14,7 +14,7 @@ export type HomeStackParamList = {
 
 export type ProfileStackParamList = {
   Profile: undefined;
-  Details: undefined;
+  EditProfile: undefined;
 };
 
 export type ShopStackParamList = {
@@ -43,3 +43,8 @@ export type HomeStackNavigationProp = {
     BottomTabNavigationProp<TabParamList>
   >;
 };
+
+export type ProfileStackNavigationProp = NativeStackNavigationProp<
+  ProfileStackParamList,
+  'Profile'
+>;
