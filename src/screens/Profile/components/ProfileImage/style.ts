@@ -1,4 +1,5 @@
 import {StyleSheet} from 'react-native';
+import {colors} from '../../../../assets/colors';
 
 export const profileImgStyles = StyleSheet.create({
   profileImage: {
@@ -7,5 +8,10 @@ export const profileImgStyles = StyleSheet.create({
     borderRadius: 100,
     justifyContent: 'center',
     alignItems: 'center',
+  },
+  image: {
+    borderRadius: 50,
+    borderWidth: 0.5,
+    borderColor: colors.grays.gray400,
   },
 });

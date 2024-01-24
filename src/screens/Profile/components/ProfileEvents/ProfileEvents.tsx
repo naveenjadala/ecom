@@ -13,7 +13,7 @@ const ProfileEvents: FC<profileEventsProps> = ({title, onClick, subTitle}) => {
   return (
     <TouchableOpacity
       accessibilityRole="button"
-      onPress={() => console.log('click')}
+      onPress={() => onClick()}
       style={profileEventsStyles.container}>
       <View>
         <Text style={profileEventsStyles.text}>{title}</Text>

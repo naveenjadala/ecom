@@ -52,7 +52,7 @@ exports[`Profile should render Profile screen snapShort 1`] = `
             }
             accessible={true}
             collapsable={false}
-            focusable={false}
+            focusable={true}
             onClick={[Function]}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
@@ -70,6 +70,7 @@ exports[`Profile should render Profile screen snapShort 1`] = `
                 "width": 100,
               }
             }
+            testID="profileImage"
           >
             <test-file-stub
               height={100}
@@ -423,7 +424,7 @@ exports[`Profile should render Profile screen snapShort 1`] = `
             <Text
               style={
                 {
-                  "color": "black",
+                  "color": "#000000",
                   "fontSize": 8,
                   "letterSpacing": 0,
                   "textAlignVertical": "center",
@@ -435,6 +436,7 @@ exports[`Profile should render Profile screen snapShort 1`] = `
             <Text
               style={
                 {
+                  "color": "#8C8C8C",
                   "fontSize": 6.5,
                 }
               }
@@ -497,7 +499,7 @@ exports[`Profile should render Profile screen snapShort 1`] = `
             <Text
               style={
                 {
-                  "color": "black",
+                  "color": "#000000",
                   "fontSize": 8,
                   "letterSpacing": 0,
                   "textAlignVertical": "center",
@@ -509,6 +511,7 @@ exports[`Profile should render Profile screen snapShort 1`] = `
             <Text
               style={
                 {
+                  "color": "#8C8C8C",
                   "fontSize": 6.5,
                 }
               }

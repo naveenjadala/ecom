@@ -162,6 +162,7 @@ const AppNavigator = () => {
         },
         tabBarActiveTintColor: colors.secondary,
         tabBarInactiveTintColor: colors.grays.gray400,
+        headerShown: false,
       })}>
       <Tab.Screen
         name="homeStack"
@@ -175,7 +176,7 @@ const AppNavigator = () => {
       />
       <Tab.Screen
         name="favoritesStack"
-        component={FavoritesHome}
+        component={FavoritesStack}
         options={{tabBarLabel: 'Favorites'}}
       />
       <Tab.Screen

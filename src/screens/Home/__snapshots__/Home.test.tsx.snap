@@ -80,6 +80,12 @@ exports[`Home should render Home screen 1`] = `
     </View>
     <test-file-stub
       height={20}
+      stroke="pink"
+      style={
+        {
+          "borderColor": "#fff",
+        }
+      }
       width={20}
     />
     <RCTScrollView

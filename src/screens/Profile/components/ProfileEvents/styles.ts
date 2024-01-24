@@ -1,5 +1,6 @@
 import {StyleSheet} from 'react-native';
 import {getFontSize} from '../../../../assets/fonts/FontSizes';
+import {colors} from '../../../../assets/colors';
 
 export const profileEventsStyles = StyleSheet.create({
   container: {
@@ -11,13 +12,14 @@ export const profileEventsStyles = StyleSheet.create({
     alignItems: 'center',
   },
   text: {
-    color: 'black',
+    color: colors.text,
     fontSize: getFontSize(16),
     letterSpacing: 0,
     textAlignVertical: 'center',
   },
   subText: {
     fontSize: getFontSize(13),
+    color: colors.subtext,
   },
   icon: {
     alignSelf: 'center',

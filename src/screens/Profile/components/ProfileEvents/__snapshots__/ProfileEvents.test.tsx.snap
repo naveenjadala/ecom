@@ -56,7 +56,7 @@ exports[`should render ProfileEvents snapShort 1`] = `
       <Text
         style={
           {
-            "color": "black",
+            "color": "#000000",
             "fontSize": 8,
             "letterSpacing": 0,
             "textAlignVertical": "center",
@@ -68,6 +68,7 @@ exports[`should render ProfileEvents snapShort 1`] = `
       <Text
         style={
           {
+            "color": "#8C8C8C",
             "fontSize": 6.5,
           }
         }
