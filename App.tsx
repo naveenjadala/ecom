@@ -8,6 +8,7 @@ import {ThemeProvider} from './src/helper/ThemeProvider';
 import SafeAreaViewWrapper from './src/helper/SafeAreaViewWrapper';
 import AppNavigator from './src/navigation/AppNavigator';
 import {NavigationContainer} from '@react-navigation/native';
+import {PaperProvider} from 'react-native-paper';
 // import {NavigationContainer} from '@react-navigation/native';
 
 /**
@@ -18,11 +19,13 @@ import {NavigationContainer} from '@react-navigation/native';
 const App: React.FC = () => {
   return (
     <ThemeProvider>
-      <SafeAreaViewWrapper>
-        <NavigationContainer>
-          <AppNavigator />
-        </NavigationContainer>
-      </SafeAreaViewWrapper>
+      <PaperProvider>
+        <SafeAreaViewWrapper>
+          <NavigationContainer>
+            <AppNavigator />
+          </NavigationContainer>
+        </SafeAreaViewWrapper>
+      </PaperProvider>
     </ThemeProvider>
   );
 };

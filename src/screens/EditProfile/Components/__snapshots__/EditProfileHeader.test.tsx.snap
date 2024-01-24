@@ -1,0 +1,64 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render EditProfileHeader should render EditProfileHeader 1`] = `
+<RCTSafeAreaView
+  style={
+    {
+      "backgroundColor": "#FFFFFF",
+      "flex": 1,
+      "minHeight": "100%",
+      "minWidth": "100%",
+    }
+  }
+>
+  <View
+    style={
+      {
+        "alignItems": "center",
+        "elevation": 2,
+        "flexDirection": "row",
+        "height": 60,
+        "justifyContent": "space-between",
+        "padding": 15,
+      }
+    }
+  >
+    <Text
+      onPress={[Function]}
+      style={
+        {
+          "color": "#000000",
+          "fontSize": 8,
+        }
+      }
+    >
+      Cancel
+    </Text>
+    <Text
+      onPress={[Function]}
+      style={
+        {
+          "color": "#000000",
+          "fontSize": 8,
+        }
+      }
+    >
+      Save
+    </Text>
+  </View>
+  <View
+    style={
+      [
+        {
+          "backgroundColor": "rgba(202, 196, 208, 1)",
+          "height": 0.5,
+        },
+        undefined,
+        false,
+        false,
+        undefined,
+      ]
+    }
+  />
+</RCTSafeAreaView>
+`;

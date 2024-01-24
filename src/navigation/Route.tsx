@@ -1,20 +1,50 @@
 import {NativeStackNavigationProp} from '@react-navigation/native-stack';
-export type TabParamList = {
-  homeStack: undefined;
-  profileStack: undefined;
+import {CompositeNavigationProp} from '@react-navigation/native';
+import {BottomTabNavigationProp} from '@react-navigation/bottom-tabs';
+
+export type AuthStackParamList = {
+  Login: undefined;
+  SignUp: undefined;
 };
 
-export type HomeStackProps = {
+export type HomeStackParamList = {
   Home: undefined;
   Details: undefined;
 };
 
-export type ProfileStackProps = {
+export type ProfileStackParamList = {
   Profile: undefined;
-  Details: undefined;
+  EditProfile: undefined;
 };
 
-export type HomeStackNavigationProp = NativeStackNavigationProp<
-  HomeStackProps,
-  'Home'
+export type ShopStackParamList = {
+  Shop: undefined;
+};
+
+export type BagStackParamList = {
+  Bag: undefined;
+};
+
+export type FavoritesStackParamList = {
+  Favorites: undefined;
+};
+
+export type TabParamList = {
+  homeStack: HomeStackParamList;
+  profileStack: ProfileStackParamList;
+  shopStack: ShopStackParamList;
+  bagStack: BagStackParamList;
+  favoritesStack: FavoritesStackParamList;
+};
+
+export type HomeStackNavigationProp = {
+  navigation: CompositeNavigationProp<
+    NativeStackNavigationProp<HomeStackParamList, 'Home'>,
+    BottomTabNavigationProp<TabParamList>
+  >;
+};
+
+export type ProfileStackNavigationProp = NativeStackNavigationProp<
+  ProfileStackParamList,
+  'Profile'
 >;

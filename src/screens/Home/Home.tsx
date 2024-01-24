@@ -1,6 +1,6 @@
 import {ActivityIndicator, Button, Text, View} from 'react-native';
 import React, {useEffect, useState} from 'react';
-import {useNavigation} from '@react-navigation/native';
+import {CompositeNavigationProp} from '@react-navigation/native';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import isEqual from 'lodash/isEqual';
 
@@ -11,19 +11,28 @@ import {ArtData, ArtObjects} from './types';
 import {styles} from './styles';
 import RenderItems from './components/RenderItems';
 import HomeIcon from '../../assets/images/home.svg';
-import {HomeStackNavigationProp} from '../../navigation/Route';
+import {HomeStackParamList, TabParamList} from '../../navigation/Route';
 import {TouchableOpacity} from 'react-native';
+import {BottomTabNavigationProp} from '@react-navigation/bottom-tabs';
+import {NativeStackNavigationProp} from '@react-navigation/native-stack';
+
+type HomeStackNavigationProp = {
+  navigation: CompositeNavigationProp<
+    NativeStackNavigationProp<HomeStackParamList, 'Home'>,
+    BottomTabNavigationProp<TabParamList>
+  >;
+};
 
 /**
  * Renders the Home component.
  *
  * @returns {JSX.Element} The rendered Home component.
  */
-const Home = () => {
+const Home: React.FC<HomeStackNavigationProp> = ({navigation}) => {
   const {loading, error, data, getApi} = useApiCall<ArtData>();
   const [artData, setArtData] = useState<ArtObjects[]>([]);
   const [page, setPage] = useState(1);
-  const {navigate} = useNavigation<HomeStackNavigationProp>();
+  // const {navigate} = useNavigation<HomeStackNavigationProp>();
 
   useEffect(() => {
     getApi(getArtgallery.getAllArts, {key: 'GMZbiDud', p: page});
@@ -48,17 +57,21 @@ const Home = () => {
 
   // Navigates to the 'Details' screen.
   const navigateToDetails = () => {
-    navigate('Details');
+    navigation.navigate('Details');
   };
 
   return (
     <View style={{...styles.container}}>
       <Icon name="rocket" size={30} color="#900" />
-      {/* <Button testID="button" title="click" onPress={navigateToDetails} /> */}
       <TouchableOpacity accessibilityRole="button" onPress={navigateToDetails}>
         <Text>press</Text>
       </TouchableOpacity>
-      <HomeIcon height={20} width={20} />
+      <HomeIcon
+        height={20}
+        width={20}
+        stroke={'pink'}
+        style={{borderColor: '#fff'}}
+      />
       <CustomFlatList
         data={artData}
         renderItem={RenderItems}

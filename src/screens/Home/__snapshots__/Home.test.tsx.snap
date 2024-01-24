@@ -4,7 +4,7 @@ exports[`Home should render Home screen 1`] = `
 <RCTSafeAreaView
   style={
     {
-      "backgroundColor": "#fff",
+      "backgroundColor": "#FFFFFF",
       "flex": 1,
       "minHeight": "100%",
       "minWidth": "100%",
@@ -80,6 +80,12 @@ exports[`Home should render Home screen 1`] = `
     </View>
     <test-file-stub
       height={20}
+      stroke="pink"
+      style={
+        {
+          "borderColor": "#fff",
+        }
+      }
       width={20}
     />
     <RCTScrollView

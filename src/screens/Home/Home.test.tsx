@@ -1,24 +1,14 @@
-import {useNavigation} from '@react-navigation/native';
-import {
-  fireEvent,
-  render,
-  screen,
-  useNavigationMock,
-  userEvent,
-  waitFor,
-} from '../../test/test-utils';
+import {render, screen} from '../../test/test-utils';
 import Home from './Home';
+import {HomeStackNavigationProp} from '../../navigation/Route';
+import {useNavigation} from '@react-navigation/native';
 
 jest.mock('@react-navigation/native', () => ({
   ...jest.requireActual('@react-navigation/native'),
   useNavigation: jest.fn(() => ({navigate: jest.fn()})), // Ensure useNavigation returns an object with a navigate property
 }));
 
-// Mock the navigation hook
-// jest.mock('@react-navigation/native', () => ({
-//   ...jest.requireActual('@react-navigation/native'),
-//   useNavigation: jest.fn(),
-// }));
+const nav = useNavigation<HomeStackNavigationProp>();
 
 // Mock the useApiCall hook
 jest.mock('../../networking/useApiCall', () => ({
@@ -37,12 +27,12 @@ jest.mock('../../networking/useApiCall', () => ({
 
 describe('Home', () => {
   test('should render Home screen', () => {
-    render(<Home />);
+    render(<Home navigation={nav.navigation} />);
     expect(screen).toMatchSnapshot();
   });
 
   test('should render Home screen with data from API', async () => {
-    render(<Home />);
+    render(<Home navigation={nav.navigation} />);
     expect(screen.getByText('Art 1')).toBeTruthy();
     expect(screen.getByText('Art 2')).toBeTruthy();
   });
@@ -54,7 +44,7 @@ describe('Home', () => {
       data: {artObjects: []},
       getApi: jest.fn(),
     });
-    render(<Home />);
+    render(<Home navigation={nav.navigation} />);
     expect(screen.getByText('No data found')).toBeOnTheScreen();
   });
 });
