@@ -1,65 +1,87 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should render ProfileEvents snapShort 1`] = `
-<RCTSafeAreaView
+<RNCSafeAreaProvider
+  onInsetsChange={[Function]}
   style={
-    {
-      "backgroundColor": "#FFFFFF",
-      "flex": 1,
-      "minHeight": "100%",
-      "minWidth": "100%",
-    }
+    [
+      {
+        "flex": 1,
+      },
+      undefined,
+    ]
   }
 >
   <View
-    accessibilityRole="button"
-    accessibilityState={
-      {
-        "busy": undefined,
-        "checked": undefined,
-        "disabled": undefined,
-        "expanded": undefined,
-        "selected": undefined,
-      }
-    }
-    accessibilityValue={
-      {
-        "max": undefined,
-        "min": undefined,
-        "now": undefined,
-        "text": undefined,
-      }
-    }
-    accessible={true}
     collapsable={false}
-    focusable={true}
-    onClick={[Function]}
-    onResponderGrant={[Function]}
-    onResponderMove={[Function]}
-    onResponderRelease={[Function]}
-    onResponderTerminate={[Function]}
-    onResponderTerminationRequest={[Function]}
-    onStartShouldSetResponder={[Function]}
+    pointerEvents="box-none"
     style={
       {
-        "alignItems": "center",
         "flex": 1,
-        "justifyContent": "center",
-        "opacity": 1,
       }
     }
   >
-    <Text
+    <RCTSafeAreaView
       style={
         {
-          "color": "#000000",
-          "fontSize": 6,
-          "paddingVertical": 10,
+          "backgroundColor": "#FFFFFF",
+          "flex": 1,
+          "minHeight": "100%",
+          "minWidth": "100%",
         }
       }
     >
-      ProfileEvents
-    </Text>
+      <View
+        accessibilityRole="button"
+        accessibilityState={
+          {
+            "busy": undefined,
+            "checked": undefined,
+            "disabled": undefined,
+            "expanded": undefined,
+            "selected": undefined,
+          }
+        }
+        accessibilityValue={
+          {
+            "max": undefined,
+            "min": undefined,
+            "now": undefined,
+            "text": undefined,
+          }
+        }
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          {
+            "alignItems": "center",
+            "flex": 1,
+            "justifyContent": "center",
+            "opacity": 1,
+          }
+        }
+      >
+        <Text
+          style={
+            {
+              "color": "#000000",
+              "fontSize": 6,
+              "paddingVertical": 10,
+            }
+          }
+        >
+          ProfileEvents
+        </Text>
+      </View>
+    </RCTSafeAreaView>
   </View>
-</RCTSafeAreaView>
+</RNCSafeAreaProvider>
 `;

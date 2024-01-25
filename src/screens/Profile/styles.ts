@@ -5,7 +5,6 @@ import {colors} from '../../assets/colors';
 export const profileStyles = StyleSheet.create({
   scroll: {
     flex: 1,
-    // backgroundColor: colors.primary,
   },
   header: {
     height: 50,

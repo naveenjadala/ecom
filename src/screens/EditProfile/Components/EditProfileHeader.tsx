@@ -1,4 +1,4 @@
-import {View, Text} from 'react-native';
+import {View, Text, TouchableOpacity} from 'react-native';
 import React from 'react';
 import {Divider} from 'react-native-paper';
 import {EditHeaderStyles} from './styles';
@@ -19,11 +19,11 @@ type EditProfileProps = {
 const EditProfileHeader = (props: EditProfileProps) => {
   return (
     <>
-      <View style={EditHeaderStyles.container}>
-        <Text onPress={props.onCancel} style={EditHeaderStyles.text}>
-          Cancel
-        </Text>
-        <Text onPress={props.onSave} style={EditHeaderStyles.text}>
+      <View style={EditHeaderStyles.container} testID="editProfileHeader">
+        <TouchableOpacity onPress={props.onCancel} testID="cancelButton">
+          <Text style={EditHeaderStyles.text}>Cancel</Text>
+        </TouchableOpacity>
+        <Text onPress={() => props.onSave()} style={EditHeaderStyles.text}>
           Save
         </Text>
       </View>

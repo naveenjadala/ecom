@@ -4,6 +4,7 @@ import {render} from '@testing-library/react-native';
 import {ThemeProvider} from '../helper/ThemeProvider';
 import SafeAreaViewWrapper from '../helper/SafeAreaViewWrapper';
 import {NavigationContainer, useNavigation} from '@react-navigation/native';
+import {PaperProvider} from 'react-native-paper';
 
 interface AllTheProvidersProps {
   children: ReactNode;
@@ -22,9 +23,11 @@ const AllTheProviders: FC<AllTheProvidersProps> = ({
 }) => {
   return (
     <ThemeProvider>
-      <SafeAreaViewWrapper>
-        <NavigationContainer>{children}</NavigationContainer>
-      </SafeAreaViewWrapper>
+      <PaperProvider>
+        <SafeAreaViewWrapper>
+          <NavigationContainer>{children}</NavigationContainer>
+        </SafeAreaViewWrapper>
+      </PaperProvider>
     </ThemeProvider>
   );
 };

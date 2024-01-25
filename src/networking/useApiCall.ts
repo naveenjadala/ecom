@@ -25,13 +25,25 @@ interface UseApiCallResult<T> {
   postApi: (endpoint: string, requestBody?: {}, requestParams?: {}) => void; // Method for making POST requests
 }
 
-// Custom hook for making API calls
+/**
+ * Fetches data from the specified API endpoint and handles loading, error, and data states.
+ *
+ * @param {string} endpoint - the API endpoint to fetch data from
+ * @param {any} requestParams - optional request parameters
+ * @return {Promise<void>} a Promise that resolves when the data is successfully fetched
+ */
 const useApiCall = <T>(): UseApiCallResult<T> => {
   const [loading, setLoading] = useState<boolean>(false);
   const [error, setError] = useState<string | null>(null);
   const [data, setData] = useState<T | null>(null);
 
-  // Method for making GET requests
+  /**
+   * Fetches data from the specified API endpoint and handles loading, error, and data states.
+   *
+   * @param {string} endpoint - the API endpoint to fetch data from
+   * @param {any} requestParams - optional request parameters
+   * @return {Promise<void>} a Promise that resolves when the data is successfully fetched
+   */
   const getApi = async (endpoint: string, requestParams?: any) => {
     try {
       setLoading(true);
@@ -47,10 +59,17 @@ const useApiCall = <T>(): UseApiCallResult<T> => {
     }
   };
 
-  // Method for making POST requests
+  /**
+   * Fetches data from the specified API endpoint and handles loading, error, and data states.
+   *
+   * @param {string} endpoint - the API endpoint to fetch data from
+   * @param {Object} requestBody - optional request body
+   * @param {any} requestParams - optional request parameters
+   * @return {Promise<void>} a Promise that resolves when the data is successfully fetched
+   */
   const postApi = async (
     endpoint: string,
-    requestBody?: {},
+    requestBody?: Object,
     params?: {},
     requestParams?: {},
   ) => {

@@ -1,4 +1,11 @@
-import {StyleSheet, Text, TextInput, View, ScrollView} from 'react-native';
+import {
+  StyleSheet,
+  Text,
+  TextInput,
+  View,
+  ScrollView,
+  TouchableOpacity,
+} from 'react-native';
 import React, {useState} from 'react';
 import ProfileImage from '../../components/ProfileImage/ProfileImage';
 import {editProfileStyles} from './styles';
@@ -19,7 +26,7 @@ type Props = {};
  * @return {JSX.Element} the rendered user profile component
  */
 const EditProfile = (props: Props) => {
-  const {navigate} = useNavigation<ProfileStackNavigationProp>();
+  const {navigate, goBack} = useNavigation<ProfileStackNavigationProp>();
   const [openModal, setOpenModal] = useState<boolean>(false);
   const [image, setImage] = useState<string | undefined>('');
 
@@ -52,13 +59,18 @@ const EditProfile = (props: Props) => {
     setImage(camera.assets?.[0].uri);
   };
 
+  const onCancel = () => {
+    goBack();
+  };
+
+  const onSave = () => {
+    navigate('Profile');
+  };
+
   return (
     <ScrollView style={editProfileStyles.scroll}>
       <>
-        <EditProfileHeader
-          onCancel={() => navigate('Profile')}
-          onSave={() => navigate('Profile')}
-        />
+        <EditProfileHeader onCancel={onCancel} onSave={onSave} />
         <View style={editProfileStyles.container}>
           <View style={editProfileStyles.profileImage}>
             <ProfileImage onClick={openImageModal} image={image} />

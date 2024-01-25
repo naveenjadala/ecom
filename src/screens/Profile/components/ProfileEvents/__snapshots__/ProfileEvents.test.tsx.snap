@@ -1,88 +1,110 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should render ProfileEvents snapShort 1`] = `
-<RCTSafeAreaView
+<RNCSafeAreaProvider
+  onInsetsChange={[Function]}
   style={
-    {
-      "backgroundColor": "#FFFFFF",
-      "flex": 1,
-      "minHeight": "100%",
-      "minWidth": "100%",
-    }
+    [
+      {
+        "flex": 1,
+      },
+      undefined,
+    ]
   }
 >
   <View
-    accessibilityRole="button"
-    accessibilityState={
-      {
-        "busy": undefined,
-        "checked": undefined,
-        "disabled": undefined,
-        "expanded": undefined,
-        "selected": undefined,
-      }
-    }
-    accessibilityValue={
-      {
-        "max": undefined,
-        "min": undefined,
-        "now": undefined,
-        "text": undefined,
-      }
-    }
-    accessible={true}
     collapsable={false}
-    focusable={true}
-    onClick={[Function]}
-    onResponderGrant={[Function]}
-    onResponderMove={[Function]}
-    onResponderRelease={[Function]}
-    onResponderTerminate={[Function]}
-    onResponderTerminationRequest={[Function]}
-    onStartShouldSetResponder={[Function]}
+    pointerEvents="box-none"
     style={
       {
-        "alignItems": "center",
         "flex": 1,
-        "flexDirection": "row",
-        "justifyContent": "space-between",
-        "opacity": 1,
-        "paddingHorizontal": "10%",
-        "paddingVertical": "5%",
       }
     }
   >
-    <View>
-      <Text
+    <RCTSafeAreaView
+      style={
+        {
+          "backgroundColor": "#FFFFFF",
+          "flex": 1,
+          "minHeight": "100%",
+          "minWidth": "100%",
+        }
+      }
+    >
+      <View
+        accessibilityRole="button"
+        accessibilityState={
+          {
+            "busy": undefined,
+            "checked": undefined,
+            "disabled": undefined,
+            "expanded": undefined,
+            "selected": undefined,
+          }
+        }
+        accessibilityValue={
+          {
+            "max": undefined,
+            "min": undefined,
+            "now": undefined,
+            "text": undefined,
+          }
+        }
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
         style={
           {
-            "color": "#000000",
-            "fontSize": 8,
-            "letterSpacing": 0,
-            "textAlignVertical": "center",
+            "alignItems": "center",
+            "flex": 1,
+            "flexDirection": "row",
+            "justifyContent": "space-between",
+            "opacity": 1,
+            "paddingHorizontal": "10%",
+            "paddingVertical": "5%",
           }
         }
       >
-        ProfileEvents
-      </Text>
-      <Text
-        style={
-          {
-            "color": "#8C8C8C",
-            "fontSize": 6.5,
+        <View>
+          <Text
+            style={
+              {
+                "color": "#000000",
+                "fontSize": 8,
+                "letterSpacing": 0,
+                "textAlignVertical": "center",
+              }
+            }
+          >
+            ProfileEvents
+          </Text>
+          <Text
+            style={
+              {
+                "color": "#8C8C8C",
+                "fontSize": 6.5,
+              }
+            }
+          />
+        </View>
+        <test-file-stub
+          height={20}
+          style={
+            {
+              "alignSelf": "center",
+            }
           }
-        }
-      />
-    </View>
-    <test-file-stub
-      height={20}
-      style={
-        {
-          "alignSelf": "center",
-        }
-      }
-      width={20}
-    />
+          width={20}
+        />
+      </View>
+    </RCTSafeAreaView>
   </View>
-</RCTSafeAreaView>
+</RNCSafeAreaProvider>
 `;

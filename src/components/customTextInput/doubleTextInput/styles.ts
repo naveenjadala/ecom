@@ -1,4 +1,5 @@
 import {StyleSheet} from 'react-native';
+import {colors} from '../../../assets/colors';
 
 export const customInputStyles = StyleSheet.create({
   container: {
@@ -6,7 +7,7 @@ export const customInputStyles = StyleSheet.create({
     width: '100%',
   },
   textOne: {
-    borderColor: 'black',
+    borderColor: colors.grays.gray400,
     borderTopWidth: 0.5,
     borderLeftWidth: 0.5,
     borderRightWidth: 0.5,
@@ -15,7 +16,7 @@ export const customInputStyles = StyleSheet.create({
     padding: 15,
   },
   textTwo: {
-    borderColor: 'black',
+    borderColor: colors.grays.gray400,
     borderWidth: 0.5,
     borderBottomRightRadius: 5,
     borderBottomLeftRadius: 5,
